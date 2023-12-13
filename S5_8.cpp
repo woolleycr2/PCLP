@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     char s[100];
-    cin.getline(s, 100);
+    cin.get(s, 100);
     bool numar = false;
     for (int i = 0; i <= strlen(s) - 1; i++)
     {
