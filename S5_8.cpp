@@ -1,14 +1,21 @@
 #include <iostream>
-#include <cctype>
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 using namespace std;
 
 int main()
 {
     char s[100];
     cin.getline(s, 100);
-    for (int i = 0; i <= strlen(s);i++)
-    if(isalnum(s[i])==0)
-        break;
+    bool numar = false;
+    for (int i = 0; i <= strlen(s) - 1; i++)
+    {
+        if (isdigit(s[i]))
+            numar = true;
         else
-            cout << "Sirul introdus reprezinta un numar";
+            numar = false;
+    }
+    if (numar)
+        cout << "Sirul este un numar";
 }
